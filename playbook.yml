@@ -17,3 +17,7 @@
     - name: Print hello
       ansible.builtin.debug:
         msg: "Hello There"
+
+    - name: Print Userninput interface name
+      debug:
+        msg: "{{ input_intf_name }}"
