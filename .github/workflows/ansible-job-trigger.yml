@@ -23,6 +23,6 @@ jobs:
       # - name: Install CICD Collections
       #   run: ansible-galaxy collection install -r .github/ansible-collections-cicd.yml --force
 
-      # - name: Trigger AWX Nonprod Job from Runner
-      #   if: github.ref == 'refs/heads/develop'
-      #   run: ansible-playbook /home/dev/git_runner_files/playbooks/run_awx_nonprod_template.yml
+      - name: Trigger AWX Nonprod Job from Runner
+        if: github.ref == 'refs/heads/develop'
+        run: ansible-playbook /home/dev/git_runner_files/playbooks/run_awx_nonprod_template.yml
