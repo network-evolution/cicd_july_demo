@@ -26,3 +26,7 @@ jobs:
       - name: Trigger AWX Nonprod Job from Runner
         if: github.ref == 'refs/heads/develop'
         run: ansible-playbook /home/dev/git_runner_files/playbooks/run_awx_nonprod_template.yml
+
+      - name: Trigger AWX Prod Job from Runner
+        if: github.ref == 'refs/heads/main'
+        run: ansible-playbook /home/dev/git_runner_files/playbooks/run_awx_prod_template.yml
